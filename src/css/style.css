@@ -13,8 +13,7 @@ body {
     "footer footer footer footer";
   grid-template-columns: repeat(4, 1fr);
   font-size: 1.6rem;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
 }
 
 /*  HEADER  */
@@ -24,23 +23,23 @@ body {
   background-color: #fff;
 }
 
-.header .header-container{
-    display: flex;
-    padding: 20px 40px;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 75px;
+.header .header-container {
+  display: flex;
+  padding: 20px 40px;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 75px;
 }
 
-.header h1{
-    font-size: 3rem;
-    font-weight: 700;
-    transition: 0.2s ease-in-out;
+.header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  transition: 0.2s ease-in-out;
 }
 
-.header a:hover h1{ /*quando der hover no a , faz algo no h1*/
-    color: coral;
-
+.header a:hover h1 {
+  /*quando der hover no a , faz algo no h1*/
+  color: coral;
 }
 
 /*  HERO  */
@@ -48,7 +47,7 @@ body {
 .hero {
   grid-area: hero;
   height: 89vh;
-  background: url('../images/lemons.jpg') center center no-repeat;
+  background: url("../images/lemons.jpg") center center no-repeat;
   background-size: cover; /*Faz a imagem se adequar a tela*/
   display: flex;
   justify-content: center;
@@ -62,8 +61,8 @@ body {
   font-size: 4rme;
 }
 
-.hero::after{
-  content: url('../images/seta_preta.png');
+.hero::after {
+  content: url("../images/seta_preta.png");
   position: absolute;
   height: 35px;
   bottom: 40px;
@@ -71,17 +70,23 @@ body {
   /* animation: nome da animação , tempo da animação , repetição , ação*/
 }
 
-@-webkit-keyframes downarrow{
-  0% { -webkit-transform: translateY(0); opacity: 0.4;}
-  100% { -webkit-transform: translateY(0.4em); opacity: 0.9;}
+@-webkit-keyframes downarrow {
+  0% {
+    -webkit-transform: translateY(0);
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: translateY(0.4em);
+    opacity: 0.9;
+  }
 }
 
-@media (max-width: 425px){
-  .hero{
+@media (max-width: 425px) {
+  .hero {
     height: 60vh;
   }
 
-  .hero h2{
+  .hero h2 {
     font-size: 2.5rem;
   }
 }
@@ -105,13 +110,13 @@ body {
   align-items: center;
 }
 
-.about .item h3{
+.about .item h3 {
   font-weight: 600;
   font-size: 2.2rem;
   align-self: flex-start;
 }
 
-.about .item p{
+.about .item p {
   font-size: 1.8rem;
   margin: 25px 0;
   font-weight: 400px;
@@ -121,38 +126,37 @@ body {
   align-self: flex-start;
 }
 
-.about .item .btn-know-more{
+.about .item .btn-know-more {
   font-size: 1.6rem;
   align-self: flex-start;
-  font-weight: 400;
 }
 
-.about .item .btn-know-more:hover{
+.about .item .btn-know-more:hover {
   font-weight: 800;
 }
 
-.about .image{
+.about .image {
   height: 100%;
   width: 100%;
   background-size: cover;
 }
 
-.about .image.right{
-   background: url('../images/bridge.jpg') center center no-repeat;
-   background-size: cover;
-}
-
-.about .image.left{
-  background: url('../images/sky.jpg') center center no-repeat;
+.about .image.right {
+  background: url("../images/bridge.jpg") center center no-repeat;
   background-size: cover;
 }
 
-@media(max-width: 425px){
-  .about .item{
+.about .image.left {
+  background: url("../images/sky.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 425px) {
+  .about .item {
     text-align: center;
   }
 
-  .about{
+  .about {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
   }
@@ -162,8 +166,46 @@ body {
 
 .services {
   grid-area: services;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
 }
 
+.services .service{
+  padding: 70px 20px;
+}
+
+.services .service img{
+  width: 250px;
+  margin-bottom: 30px;
+}
+
+.services .service h3{
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.services .service p{
+  font-size: 2rem;
+  font-weight: 400;
+  max-width: 400px;
+  margin: 20px auto 0;
+  line-height: 25px;
+}
+
+.services .service:nth-child(1){
+  background-color: lightskyblue;
+}
+
+.services .service:nth-child(2){
+  background-color: lightpink;
+}
+
+@media(max-width:425px){
+  .services{
+    grid-template-columns: 1fr;
+  }
+}
 /*  PROJECTS  */
 
 .projects {
